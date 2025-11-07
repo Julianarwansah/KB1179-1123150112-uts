@@ -25,6 +25,10 @@ class JulSplashScreen2 extends StatelessWidget {
                   spreadRadius: 5,
                 ),
               ],
+              image: const DecorationImage(
+                image: AssetImage("assets/images/gambar1.jpg"),
+                fit: BoxFit.cover,
+              ),
             ),
           ),
 
