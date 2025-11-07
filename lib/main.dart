@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'splash_screen/splash_screen1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,7 +8,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  final String nim = '1123150112';
+  final String nim = '1123150112'; // Tetap tampil di UI untuk verifikasi warna
 
   @override
   Widget build(BuildContext context) {
@@ -15,69 +16,10 @@ class MyApp extends StatelessWidget {
       title: 'Julian Arwansah',
       theme: ThemeData(
         useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange), // Warna dari digit terakhir NIM = 2
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
-    );
-  }
-}
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Aplikasi Tema Flutter'),
-        bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(20),
-          child: Padding(
-            padding: const EdgeInsets.only(bottom: 8.0),
-            child: Text(
-              'NIM: 1123150112',
-              style: const TextStyle(
-                color: Colors.white70,
-                fontSize: 12,
-              ),
-            ),
-          ),
-        ),
-      ),
-
-      body: const BodySection(),
-      bottomNavigationBar: const FooterSection(),
-    );
-  }
-}
-
-class BodySection extends StatelessWidget {
-  const BodySection({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Halo, Julian Arwansah!',
-        style: TextStyle(fontSize: 20),
-      ),
-    );
-  }
-}
-
-class FooterSection extends StatelessWidget {
-  const FooterSection({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(8.0),
-      child: Text(
-        '© 2025 - Julian Arwansah',
-        textAlign: TextAlign.center,
-        style: TextStyle(fontSize: 12, color: Colors.grey),
-      ),
+      home: const JulSplashScreen(),
     );
   }
 }
