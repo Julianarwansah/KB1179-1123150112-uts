@@ -45,7 +45,39 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: const Center(child: Text('Bagian 2: AppBar selesai')),
+
+      body: const BodySection(),
+      bottomNavigationBar: const FooterSection(),
+    );
+  }
+}
+
+class BodySection extends StatelessWidget {
+  const BodySection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: Text(
+        'Halo, Julian Arwansah!',
+        style: TextStyle(fontSize: 20),
+      ),
+    );
+  }
+}
+
+class FooterSection extends StatelessWidget {
+  const FooterSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Padding(
+      padding: EdgeInsets.all(8.0),
+      child: Text(
+        '© 2025 - Julian Arwansah',
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 12, color: Colors.grey),
+      ),
     );
   }
 }
