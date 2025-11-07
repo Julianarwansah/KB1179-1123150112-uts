@@ -8,7 +8,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  final String nim = '1123150112'; // Tetap tampil di UI untuk verifikasi warna
+  final String nim = '1123150112';
 
   @override
   Widget build(BuildContext context) {
