@@ -12,6 +12,7 @@ class JulSplashScreen2 extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Spacer(),
+
           Container(
             height: 240,
             width: 240,
@@ -26,7 +27,7 @@ class JulSplashScreen2 extends StatelessWidget {
                 ),
               ],
               image: const DecorationImage(
-                image: AssetImage("assets/images/gambar1.jpg"),
+                image: AssetImage("assets/images/gambar2.jpg"),
                 fit: BoxFit.cover,
               ),
             ),
@@ -43,21 +44,7 @@ class JulSplashScreen2 extends StatelessWidget {
             ),
           ),
 
-          const SizedBox(height: 8),
-
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 40),
-            child: Text(
-              "Selamat datang di splash screen 1",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 14,
-                color: colorScheme.onSurface.withValues(alpha: 0.7),
-              ),
-            ),
-          ),
-
-          const SizedBox(height: 30),
+          const SizedBox(height: 40),
 
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 40),
@@ -66,13 +53,6 @@ class JulSplashScreen2 extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pushAndRemoveUntil(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const JulSplashScreen2(),
-                    ),
-                    (Route<dynamic> route) => false,
-                  );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: colorScheme.primary,
@@ -95,12 +75,13 @@ class JulSplashScreen2 extends StatelessWidget {
 
           const SizedBox(height: 30),
 
+          // Indikator titik
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              _buildDot(colorScheme.primary),
-              const SizedBox(width: 10),
               _buildDot(colorScheme.primary.withValues(alpha: 0.3)),
+              const SizedBox(width: 10),
+              _buildDot(colorScheme.primary),
               const SizedBox(width: 10),
               _buildDot(colorScheme.primary.withValues(alpha: 0.3)),
             ],
@@ -108,6 +89,7 @@ class JulSplashScreen2 extends StatelessWidget {
 
           const Spacer(),
 
+          // Footer NIM
           Padding(
             padding: const EdgeInsets.only(bottom: 16),
             child: Text(
