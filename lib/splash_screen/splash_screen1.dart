@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:uts_julian_arwansah_1123150112/splash_screen/splash_screen2.dart';
+
 class JulSplashScreen extends StatelessWidget {
   const JulSplashScreen({super.key});
 
@@ -66,6 +68,13 @@ class JulSplashScreen extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
+                  Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const JulSplashScreen2(),
+                    ),
+                    (Route<dynamic> route) => false,
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: colorScheme.primary,
