@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:uts_julian_arwansah_1123150112/splash_screen/splash_screen3.dart';
 
-class JulSplashScreen2 extends StatelessWidget {
-  const JulSplashScreen2({super.key});
+class JulSplashScreen3 extends StatelessWidget {
+  const JulSplashScreen3({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +13,6 @@ class JulSplashScreen2 extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Spacer(),
-
           Container(
             height: 240,
             width: 240,
@@ -29,7 +27,7 @@ class JulSplashScreen2 extends StatelessWidget {
                 ),
               ],
               image: const DecorationImage(
-                image: AssetImage("assets/images/gambar2.jpg"),
+                image: AssetImage("assets/images/gambar3.jpg"),
                 fit: BoxFit.cover,
               ),
             ),
@@ -55,12 +53,8 @@ class JulSplashScreen2 extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pushAndRemoveUntil(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const JulSplashScreen3(),
-                    ),
-                    (Route<dynamic> route) => false,
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text("Get Started clicked!")),
                   );
                 },
                 style: ElevatedButton.styleFrom(
@@ -72,11 +66,8 @@ class JulSplashScreen2 extends StatelessWidget {
                   elevation: 5,
                 ),
                 child: const Text(
-                  "Continue",
-                  style: TextStyle(
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  "Get Started",
+                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -84,21 +75,19 @@ class JulSplashScreen2 extends StatelessWidget {
 
           const SizedBox(height: 30),
 
-          // Indikator titik
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               _buildDot(colorScheme.primary.withValues(alpha: 0.3)),
               const SizedBox(width: 10),
-              _buildDot(colorScheme.primary),
-              const SizedBox(width: 10),
               _buildDot(colorScheme.primary.withValues(alpha: 0.3)),
+              const SizedBox(width: 10),
+              _buildDot(colorScheme.primary),
             ],
           ),
 
           const Spacer(),
 
-          // Footer NIM
           Padding(
             padding: const EdgeInsets.only(bottom: 16),
             child: Text(
@@ -118,10 +107,7 @@ class JulSplashScreen2 extends StatelessWidget {
     return Container(
       height: 12,
       width: 12,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: color,
-      ),
+      decoration: BoxDecoration(shape: BoxShape.circle, color: color),
     );
   }
 }
