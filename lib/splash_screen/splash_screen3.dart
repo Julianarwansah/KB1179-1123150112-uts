@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uts_julian_arwansah_1123150112/login/login.dart';
 
 class JulSplashScreen3 extends StatelessWidget {
   const JulSplashScreen3({super.key});
@@ -53,8 +54,12 @@ class JulSplashScreen3 extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text("Get Started clicked!")),
+                  Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const JulLogin(),
+                    ),
+                    (Route<dynamic> route) => false,
                   );
                 },
                 style: ElevatedButton.styleFrom(
