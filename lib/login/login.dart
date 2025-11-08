@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uts_julian_arwansah_1123150112/splash_screen/splash_screen1.dart';
 
 class JulLogin extends StatefulWidget {
   const JulLogin({super.key});
@@ -13,7 +14,6 @@ class _JulLoginState extends State<JulLogin> {
   final _passwordController = TextEditingController();
 
   bool _isPasswordVisible = false;
-  bool _isLoading = false;
 
   @override
   void dispose() {
@@ -22,19 +22,13 @@ class _JulLoginState extends State<JulLogin> {
     super.dispose();
   }
 
-  Future<void> _handleLogin() async {
+  void _handleLogin() {
     if (_formKey.currentState!.validate()) {
-      setState(() {
-        _isLoading = true;
-      });
-
-      await Future.delayed(const Duration(seconds: 2));
-
-      if (!mounted) return;
-
-      setState(() {
-        _isLoading = false;
-      });
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (context) => JulSplashScreen(),
+        ),
+      );
     }
   }
 
@@ -108,15 +102,13 @@ class _JulLoginState extends State<JulLogin> {
                 ),
                 const SizedBox(height: 24),
                 ElevatedButton(
-                  onPressed: _isLoading ? null : _handleLogin,
+                  onPressed: _handleLogin,
                   style: ElevatedButton.styleFrom(
                     minimumSize: const Size(double.infinity, 48),
                     backgroundColor: Colors.deepOrange,
                     foregroundColor: Colors.white,
                   ),
-                  child: _isLoading
-                      ? const CircularProgressIndicator(color: Colors.white)
-                      : const Text("Login"),
+                  child: const Text("Login"),
                 ),
                 const Spacer(),
                 Padding(
