@@ -34,7 +34,7 @@ class JulSplashScreen3 extends StatelessWidget {
             ),
           ),
 
-          const SizedBox(height: 40),
+          const SizedBox(height: 30),
 
           Text(
             "Welcome",
@@ -45,7 +45,19 @@ class JulSplashScreen3 extends StatelessWidget {
             ),
           ),
 
-          const SizedBox(height: 40),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 40),
+            child: Text(
+              "Selamat datang di splash screen 1",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 14,
+                color: colorScheme.onSurface.withValues(alpha: 0.7),
+              ),
+            ),
+          ),
+
+          const SizedBox(height: 30),
 
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 40),
