@@ -3,7 +3,6 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Flutter-3.24.0-blue?logo=flutter&logoColor=white&style=flat-square">
-  <img src="https://img.shields.io/badge/Material_3-Red_Theme-ff5555?style=flat-square">
   <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square">
 </p>
 
@@ -21,7 +20,7 @@
 ## 📱 Tampilan Aplikasi
 | Splash 1 | Splash 2 | Splash 3 | Login |
 |-----------|-----------|-----------|--------|
-| <img src="screenshots/Screenshot 2025-11-10 090139.png" width="200"/> | <img src="screenshots/Screenshot 2025-11-10 090215.png" width="200"/> | <img src="screenshots/Screenshot 2025-11-10 090221.png" width="200"/> | <img src="screenshots/Screenshot 2025-11-10 090229.png" width="200"/> |
+| <img src="assets/screenshots/Screenshot 2025-11-10 090139.png" width="200"/> | <img src="assets/screenshots/Screenshot 2025-11-10 090215.png" width="200"/> | <img src="assets/screenshots/Screenshot 2025-11-10 090221.png" width="200"/> | <img src="assets/screenshots/Screenshot 2025-11-10 090229.png" width="200"/> |
 
 <p align="center">
   <img src="screenshots/show (1).gif" width="260" alt="App demo animation"><br>
@@ -34,3 +33,4 @@ flutter pub get
 flutter run
 atau
 flutter run -d chrome
+
