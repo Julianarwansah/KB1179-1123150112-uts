@@ -20,7 +20,7 @@
 ## 📱 Tampilan Aplikasi
 | Splash 1 | Splash 2 | Splash 3 | Login |
 |-----------|-----------|-----------|--------|
-| <img src="assets/screenshoot/Screenshot 2025-11-10 090139.png" width="200"/> | <img src="assets/screenshots/Screenshot 2025-11-10 090215.png" width="200"/> | <img src="assets/screenshots/Screenshot 2025-11-10 090221.png" width="200"/> | <img src="assets/screenshots/Screenshot 2025-11-10 090229.png" width="200"/> |
+| <img src="assets/screenshoot/Screenshot 2025-11-10 090139.png" width="200"/> | <img src="Screenshot 2025-11-10 090215.png" width="200"/> | <img src="Screenshot 2025-11-10 090221.png" width="200"/> | <img src="Screenshot 2025-11-10 090229.png" width="200"/> |
 
 <p align="center">
   <img src="screenshots/show (1).gif" width="260" alt="App demo animation"><br>
@@ -33,5 +33,6 @@ flutter pub get
 flutter run
 atau
 flutter run -d chrome
+
 
 
